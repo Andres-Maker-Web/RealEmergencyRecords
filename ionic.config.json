@@ -1,0 +1,7 @@
+{
+  "name": "RealEmergencyRecords",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
