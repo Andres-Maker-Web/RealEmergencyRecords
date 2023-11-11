@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="call">
+    <ion-item>
+      <ion-label position="stacked">Titulo</ion-label>
+      <ion-input [(ngModel)]="call.title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Descripcion</ion-label>
+      <ion-input [(ngModel)]="call.description"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Fecha</ion-label>
+      <ion-input [(ngModel)]="call.date"></ion-input>
+    </ion-item>
+  </div>
+
+  <ion-button expand="block" color="success" (click)="updateCall()">
+    <ion-icon name="save" slot="start"></ion-icon>
+    Actualizar
+  </ion-button>
+
+  <ion-button expand="block" color="danger" (click)="deleteCall()">
+    <ion-icon name="trash" slot="start"></ion-icon>
+    Eliminar
+  </ion-button>
+
+</ion-content>
